@@ -8,7 +8,7 @@ const Detail = () => {
     const { id } = useParams();
 
     const todo = useSelector((state) => state.todos.todos);
-
+    console.log('detail : ', todo);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -27,8 +27,6 @@ const Detail = () => {
                             borderColor="#ddd"
                             onClick={() => {
                                 navigate('/');
-                                // 해결 못한 오류...
-                                window.location.reload();
                             }}
                         >
                             이전으로
